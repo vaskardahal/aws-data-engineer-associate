@@ -21,5 +21,5 @@
 * Data examples: images, email messages, text files, social media content, text messages, videos. 
 * 80% of the data worldwide. 
 
-![Structured vs Unstructured Data](structured_vs_unstructured_data.png)
+![Structured vs Unstructured Data](./images/structured_vs_unstructured_data.png)
 
