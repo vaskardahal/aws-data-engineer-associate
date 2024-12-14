@@ -1,9 +1,9 @@
 # Storage
 
 Contents: 
-- [Storage options in AWS](#Storage options in AWS)
-- [AWS S3](#AWS S3)
-- [Data Lake vs Data Warehouse](#Data Lake vs Data Warehouse)
+- [Storage options in AWS](## Storage options in AWS)
+- [AWS S3](## AWS S3)
+- [Data Lake vs Data Warehouse](## Data Lake vs Data Warehouse)
 
 ## Storage options in AWS
 * Simple Storage Service (S3)
