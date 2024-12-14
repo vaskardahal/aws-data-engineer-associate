@@ -4,14 +4,23 @@ Contents:
 - [Storage options in AWS](#storage-options-in-aws)
 - [Data Lake vs Data Warehouse](#data-lake-vs-data-warehouse)
 
+
+
 ---
 ## Storage options in AWS
+
+### Storing objects - without analytical capability
 * Simple Storage Service (S3)
 * Elastic Block Storage (EBS)
 * Elastic File System (EFS)
 * Glacier
 * Storage Gateway
 
+### Data Lake
+* Recommended option for storing massive volume of semi-structured and unstructured data for analytical purpose. 
+
+### Data Warehouse
+* Recommended option for storing massive volume of structured data for analytical purpose. 
 
 ## Data Lake vs Data Warehouse
 
