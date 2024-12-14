@@ -5,6 +5,7 @@ Contents:
 - [AWS S3](#aws-s3)
 - [Data Lake vs Data Warehouse](#data-lake-vs-data-warehouse)
 
+---
 ## Storage options in AWS
 * Simple Storage Service (S3)
 * Elastic Block Storage (EBS)
