@@ -8,7 +8,7 @@
 * No matter how data gets into S3, there should be a meaningful way to organize it and find it when required. And that is where Data Lake comes in. 
 * Data lake is an architectural concept that helps to manage multiple data types from multiple sources through a single set of tools. 
 * In other words, data lake takes Amazon S3 buckets and organizes them by categorizing them by data inside the buckets - irrespective of how the data got there or what kind of data it is. 
-![[data_lake.png]]
+* ![Data Lake](./images/data_lake.png)
 
 ### Why Data Lake? 
 * Many organizations end up grouping data into numerous storage locations called silos.
@@ -26,7 +26,7 @@
 
 
 
-![[data_lake_architecture.png]]
+![Data Lake Architecture](./images/data_lake_architecture.png)
 
 
-![[modern_data_architecture_II.png]]
+![Modern Data Architecture II](./images/modern_data_architecture_II.png)
