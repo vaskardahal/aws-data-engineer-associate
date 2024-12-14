@@ -9,6 +9,7 @@
 | 3      | Data Operations and Support       | 22%     |
 | 4      | Data Security and Governance      | 18%     |
 
+## [Resources](Resources.md)
 ## [AWS Services](AWS_Services.md)
 
 ## [Types of Data](Types_of_Data.md)
