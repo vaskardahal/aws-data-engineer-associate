@@ -1,5 +1,10 @@
 # Storage
 
+Contents: 
+- [Storage options in AWS](#Storage options in AWS)
+- [AWS S3](#AWS S3)
+- [Data Lake vs Data Warehouse](#Data Lake vs Data Warehouse)
+
 ## Storage options in AWS
 * Simple Storage Service (S3)
 * Elastic Block Storage (EBS)
@@ -89,3 +94,6 @@
 #### Cross-region replication
 * Implemented at Bucket level? Since S3 is at global level. 
 * Hands-on practice: 1:25:00-1:40:00
+
+
+## Data Lake vs Data Warehouse
