@@ -1,6 +1,6 @@
 # Data Lake Architecture
 
-![Modern Data Architecture](modern_data_architecture.png)
+![Modern Data Architecture](./images/modern_data_architecture.png)
 
 * A Data Lake is a centralized repository that allows to store all structured and unstructured data at any scale.
 * Data lake can store data as-is, without having to first structure the data. 
