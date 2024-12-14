@@ -2,7 +2,7 @@
 
 Contents: 
 - [Storage options in AWS](#storage-options-in-aws)
-- [AWS S3](## AWS S3)
+- [AWS S3](#aws-s3)
 - [Data Lake vs Data Warehouse](#data-lake-vs-data-warehouse)
 
 ## Storage options in AWS
