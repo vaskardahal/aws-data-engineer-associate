@@ -1,7 +1,7 @@
 
 # AWS S3
 
-![S3](S3.png)
+![S3](./images/S3.png)
 * AWS has a storage service called **Amazon Simple Storage Service** (Amazon S3). 
 * This service is an object storage with industry-leading scalability, data availability, security and performance. 
 * Object storage means it can store just about any kind of discrete object in this storage.
@@ -24,13 +24,13 @@
 	* Cost-effective
 	* Low latency
 
-![Storage](storage.png)
+![Storage](./images/storage.png)
 
 ### Buckets
 * In summary, S3 stores Objects in Buckets. 
 * To look into: Bucket policies, bucket retention policies, bucket security
 
-![Buckets](buckets.png)
+![Buckets](./images/buckets.png)
 
 
 ### Centralized data architecture
@@ -71,7 +71,7 @@
 * Objects can be uploaded directly to Glacier storage. 
 * Or S3 Life Cycle Policies can be used to transfer data from other storage classes. 
 
-![S3 Comparison](S3_comparison.png)
+![S3 Comparison](./images/S3_comparison.png)
 
 (Image is at 1:22:00)
 
