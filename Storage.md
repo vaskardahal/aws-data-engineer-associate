@@ -80,6 +80,7 @@
 * Or S3 Life Cycle Policies can be used to transfer data from other storage classes. 
 
 ![S3 Comparison](./images/S3_comparison.png)
+
 (Image is at 1:22:00)
 
 
