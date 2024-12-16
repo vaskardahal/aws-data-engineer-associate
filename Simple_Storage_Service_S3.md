@@ -136,7 +136,7 @@
 * Once enabled, versioning cannot be disabled - it can only be suspended. That means, the existing versions will persist without any impact, but new changes will not be tracked by versioning going forward.  
 
 
-### S3 Replication
+## S3 Replication
 * Replication comes in two flavors:
 	* Cross-Region Replication (CRR) - source and replica buckets are in different regions.
 	* Same-Region Replicaiton (SRR) - source and replica buckets are in the same region.
@@ -161,7 +161,7 @@
 * To replicate the existing objects or the objects that fail to replicate, S3 Batch Replication should be used. 
 
 
-### S3 Event Notification
+## S3 Event Notification
 * This feature allows to configure S3 to notify when certain events take place. 
 * These events include:
 	* Creating new objects
