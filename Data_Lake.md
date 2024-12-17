@@ -1,6 +1,5 @@
 # Data Lake Architecture
 
-
 ## Data Lake
 
 ![Modern Data Architecture](./images/modern_data_architecture.png)
