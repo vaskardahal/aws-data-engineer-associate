@@ -14,5 +14,5 @@
 
 ## [Types of Data](Types_of_Data.md)
 
-## [Storage](Storage.md)
+## [Storage](Storage/Storage.md)
 

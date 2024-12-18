@@ -9,7 +9,7 @@
 	* Bucket: Bucket is a logical container similar to folder in hard drive - but only larger, better organized and with in-built security mechanisms. 
 * S3 is an Object based storage class. It cannot be a boot volume and it cannot store applications. 
 ### Features of S3: 
-![S3](./images/S3.png)
+![S3](../images/S3.png)
 * Scalable: Can grow to any size required. 
 * Durable: Objects will be available when they are needed. Its designed for 99.99999% of data durability. S3 automatically creates and stores replicas of all Objects across multiple system to ensure durability. This enables data to be available when needed and protected against failures, errors and threats. 
 * Secure: Provides encryption features and access management controls. 
@@ -25,13 +25,13 @@
 * Cost-effective
 * Low latency
 
-![Storage](./images/storage.png)
+![Storage](../images/storage.png)
 
 ### Buckets
 * In summary, S3 stores Objects in Buckets. 
 * To look into: Bucket policies, bucket retention policies, bucket security
 
-![Buckets](./images/buckets.png)
+![Buckets](../images/buckets.png)
 
 
 ### Centralized data architecture
@@ -112,12 +112,12 @@
 * Both options allow us to use simple SQL statements to retrieve filtered data. 
 * Amazon performs server-side filtering which is up to 400% times faster and 80% cheaper - this is because server-side filtering avoids downloading the entire dataset to the client. 
 
-![S3 Comparison](./images/S3_comparison.png)
+![S3 Comparison](../images/S3_comparison.png)
 
 (Image is at 1:22:00)
 
 
-![[Pasted image 20241211225946.png]]
+![[../images/Pasted image 20241211225946.png|Pasted image 20241211225946.png]]
 (Image at 1:33:08)
 #### Cross-region replication
 * Implemented at Bucket level? Since S3 is at global level. 
