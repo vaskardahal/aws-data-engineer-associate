@@ -7,7 +7,7 @@
 * **Data Processing** means the collection and manipulation of data to produce meaningful information. 
 * Between collecting and processing data, it is data processing where most of the time will be spent. 
 
-![Processing Data](processing_data.png)
+![Processing Data](assets/velocity_of_data/processing_data.png)
 
 
 ### Batch Processing
