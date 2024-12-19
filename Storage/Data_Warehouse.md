@@ -6,7 +6,7 @@
 * Data is stored within Data Warehouse using a schema. 
 * AWS provides data warehousing service called Amazon Redshift. 
 
-![Data Warehouse](../images/data_warehouse.png)
+![Data Warehouse](assets/data_warehouse/data_warehouse.png)
 
 ## Data Warehouse Schema
 * Schema defines how data is stored within tables, columns and rows, and how different tables are related to each other. 
@@ -17,9 +17,9 @@
 
 ## Data Warehouse Architecture
 
-![Data Warehouse Architecture](../images/data_warehouse_architecture.png)
+![Data Warehouse Architecture](assets/data_warehouse/data_warehouse_architecture.png)
 
-![Data Warehouse Architecture](../images/data_warehouse_architecture_II.png)
+![Data Warehouse Architecture](assets/data_warehouse/data_warehouse_architecture_II.png)
 
 
 ## Data Mart

@@ -9,7 +9,7 @@
 	* Bucket: Bucket is a logical container similar to folder in hard drive - but only larger, better organized and with in-built security mechanisms. 
 * S3 is an Object based storage class. It cannot be a boot volume and it cannot store applications. 
 ### Features of S3: 
-![S3](../images/S3.png)
+![S3](assets/simple_storage_service_s3/S3.png)
 * Scalable: Can grow to any size required. 
 * Durable: Objects will be available when they are needed. Its designed for 99.99999% of data durability. S3 automatically creates and stores replicas of all Objects across multiple system to ensure durability. This enables data to be available when needed and protected against failures, errors and threats. 
 * Secure: Provides encryption features and access management controls. 
@@ -25,13 +25,13 @@
 * Cost-effective
 * Low latency
 
-![Storage](../images/storage.png)
+![storage](assets/simple_storage_service_s3/storage.png)
 
 ### Buckets
 * In summary, S3 stores Objects in Buckets. 
 * To look into: Bucket policies, bucket retention policies, bucket security
 
-![Buckets](../images/buckets.png)
+![buckets](assets/simple_storage_service_s3/buckets.png)
 
 
 ### Centralized data architecture
@@ -112,16 +112,32 @@
 * Both options allow us to use simple SQL statements to retrieve filtered data. 
 * Amazon performs server-side filtering which is up to 400% times faster and 80% cheaper - this is because server-side filtering avoids downloading the entire dataset to the client. 
 
-![S3 Comparison](../images/S3_comparison.png)
+|                                    | S3 Standard  | S3 Intelligent-Tiering | S3 Standard-IA | S3 One Zone-IA | S3 Glacier              |
+| ---------------------------------- | ------------ | ---------------------- | -------------- | -------------- | ----------------------- |
+| Designed for durability            | 100.00%      | 100.00%                | 100.00%        | 100.00%        | 100.00%                 |
+| Designed for availability          | 99.99%       | 99.90%                 | 99.90%         | 99.50%         | N/A                     |
+| Availability SLA                   | 99.90%       | 99%                    | 99%            | 99%            | N/A                     |
+| Availability Zones                 | $\ge 3$      | $\ge 3$                | $\ge 3$        | 1              | $\ge 1$                 |
+| Minimum capacity charge per object | 8KB          | N/A                    | 128KB          | 128KB          | 40KB                    |
+| Minimum storage during charge      | N/A          | N/A                    | 30 days        | 30 days        | 90 days                 |
+| Retrieval fee                      | N/A          | N/A                    | per GB         | per GB         | per GB                  |
+| First byte latency                 | milliseconds | milliseconds           | milliseconds   | milliseconds   | select minutes or hours |
+| Storage type                       | Object       | Object                 | Object         | Object         | Object                  |
+| Lifecycle transitions              | Yes          | Yes                    | Yes            | Yes            | Yes                     |
 
-(Image is at 1:22:00)
-
-
-![[../images/Pasted image 20241211225946.png|Pasted image 20241211225946.png]]
-(Image at 1:33:08)
-#### Cross-region replication
-* Implemented at Bucket level? Since S3 is at global level. 
-* Hands-on practice: 1:25:00-1:40:00
+## S3 Lifecycle Rules
+* Lifecycle rules can be defined explicitly to move objects between storage classes and access tiers. 
+* Examples of some criteria for setting up the rules: 
+	* Certain prefixes in S3 URL path. Eg, s3://bucketA/jpg/*
+	* Certain object tag
+* Two main types of actions can be configured for objects that fulfill the criteria: 
+	* Transition action: defines when and how objects should be moved from one storage class or access tier to another. Usage: 
+		* Move objects to Glacier for archiving after one year.
+	* Expiration action: defines at what age should an object expire and be permanently deleted. Usage: 
+		* Delete after a specified retention period for compliance purpose.
+		* Delete older versions of files (if versioning is enabled). 
+* As soon as the object becomes eligible for the lifecycle action, the billing changes apply - even if the action is not executed immediately. 
+* Only exception to this billing exists if the lifecycle rule to transition to the S3 Intelligent-Tiering storage class has been configured - billing changes only occurs once the object has been transitioned to S3 Intelligent-Tiering. 
 
 ## S3 Versioning
 * A version control feature for S3 objects in the same bucket. 
@@ -159,6 +175,9 @@
 * To get started with Replication, Versioning feature needs to be enabled in both source and destination buckets. Also, proper IAM permissions should be granted to S3 bucket. 
 * Turning replication on won't automatically replicate the existing objects in the bucket. Replication will only apply to newly added objects there on after. 
 * To replicate the existing objects or the objects that fail to replicate, S3 Batch Replication should be used. 
+* ##### Cross-region replication
+	* Implemented at Bucket level? Since S3 is at global level. 
+	* Hands-on practice: 1:25:00-1:40:00
 
 
 ## S3 Event Notification
@@ -179,3 +198,8 @@
 	* Amazon SQS
 	* AWS Lambda functions
 	* AWS Event Bridge - in turn can send these notifications to various other services. 
+
+
+
+![[../images/Pasted image 20241211225946.png|Pasted image 20241211225946.png]]
+(Image at 1:33:08)

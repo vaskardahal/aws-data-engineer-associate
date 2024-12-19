@@ -2,7 +2,7 @@
 
 ## Data Lake
 
-![Modern Data Architecture](../images/modern_data_architecture.png)
+![Modern Data Architecture](assets/data_lake/modern_data_architecture.png)
 
 * A Data Lake is centralized repository that allows to store all structured and unstructured data at any scale. 
 * it is an architectural concept that keeps the storage layer separated and segregated from the compute layer. 
@@ -11,7 +11,7 @@
 * * Data lake can store data as-is, without having to first structure the data - unlike the data warehouse that requires data to be organized and structured first. 
 * And it also allows to run different types of analytics - from dashboards and visualizations to big data processing, real-time analytics, and machine learning to guide better decisions. 
 
-* ![Data Lake](../images/data_lake.png)
+* ![Data Lake](assets/data_lake/data_lake.png)
 
 ### Why Data Lake? 
 * Many organizations end up grouping data into numerous storage locations called silos.
@@ -27,10 +27,10 @@
 * Process data in a single place. 
 *  Choice of analytical and ML engines. 
 
-![Data Lake Architecture](../images/data_lake_architecture.png)
+![Data Lake Architecture](assets/data_lake/data_lake_architecture.png)
 
 
-![Modern Data Architecture II](../images/modern_data_architecture_II.png)
+![Modern Data Architecture II](assets/data_lake/modern_data_architecture_II.png)
 
 ## Data Lake Formation
 * AWS provides Data Lake Formation service that helps us build a Data Lake. 

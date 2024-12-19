@@ -35,10 +35,10 @@ Contents:
 * Amazon Redshift Spectrum allows us to combine Data Lake and Data Warehouse as if it were a single source of data. 
 * It allows to run single query across exabytes of data irrespective of where it comes from - data lake or data warehouse. 
 
-![Data Lake and Data Warehouse](../images/data_lake_data_warehouse.png)
+![Data Lake and Data Warehouse](assets/storage/data_lake_data_warehouse.png)
 
 
-![Amazon Redshift Spectrum](../images/redshift_spectrum.png)
+![Amazon Redshift Spectrum](assets/storage/redshift_spectrum.png)
 
 
-![Redshift Spectrum II](../images/redshift_spectrum_II.png)
+![Redshift Spectrum II](assets/storage/redshift_spectrum_II.png)
