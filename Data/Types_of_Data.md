@@ -22,5 +22,5 @@
 * 80% of the data worldwide. 
 
 
-![Structured vs Unstructured Data](assets/types_of_data/structured_vs_unstructured_data.png)
+![Structured vs Unstructured Data](structured_vs_unstructured_data.png)
 
