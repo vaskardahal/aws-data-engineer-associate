@@ -39,23 +39,32 @@
 			a1[Tables]
 			b1[Items]
 			c1[Attributes]
+			d1["Primary Keys (mandatory)"]
 		end
 		
 		subgraph SQL[SQL]
 			a2[Tables]
 			b2[Rows or Records]
 			c2[Columns or Fields]
+			d2["Primary Keys (optional)"]
 		end
 		
 		a1 ==> a2
 		b1 ==> b2
 		c1 ==> c2
+		d1 ==> d2
 		
 		style NoSQL color:#6ef7ed,fill:#40594f
 		style SQL color:#6ef7ed,fill:#40594f
+	
 		
 ```
-
+* Data elements stored in the table make up attributes. 
+* A unique group of attributes will give an item. Its worth noting that a single item cannot exceed 400KB in DynamoDB. 
+* Primary key: 
+	* A mandatory key made of one or more attributes. 
+	* Primary key is used to retrieve the data. 
+	* This is why knowing access patterns is essential in the table design. 
 ### RDS vs DynamoDB
 | Characterstic     | Relational DBMS                                                                                                                                                                                                                                                                    | Amazon DynamoDB                                                                                                                                                                                                                                                                                                                                                     |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
