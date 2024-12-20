@@ -65,6 +65,11 @@
 	* A mandatory key made of one or more attributes. 
 	* Primary key is used to retrieve the data. 
 	* This is why knowing access patterns is essential in the table design. 
+* Time to Live (TTL) feature: 
+	* If TTL attribute is added to the table items, it will act as a timestamp that will be used to tell DynamoDB when to start getting rid of items. 
+	* DynamoDB compares current time to the value of TTL key in an item. If the current time is greater than the item's TTL value, then the item is marked for deletion. 
+	* DynamoDB then automatically removes the expired items from the tables, and indexes - including Local Secondary Indexes  (LSIs) and Global Secondary Indexes (GSIs) - within 48 hours of expiration. 
+	* Since the expired item is not deleted immediately, result set of queries might return this item as well. Filter operations to exclude items marked for deletion should be used to avoid this occurrence. 
 ### RDS vs DynamoDB
 | Characterstic     | Relational DBMS                                                                                                                                                                                                                                                                    | Amazon DynamoDB                                                                                                                                                                                                                                                                                                                                                     |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
