@@ -1,7 +1,18 @@
 # Amazon DynamoDB
 
 * Fully managed NoSQL Database Service that provides fast and predictable performance with seamless scalability. 
+* Supports both key-value pairs, as well as document data like JSON, HTML & XML. 
+* Allows to easily adapt the tables as the requirements change. 
+* But as a trade-off to maintaining this flexibility, it has to sacrifice the ability to perform joins and analytical queries. 
+* Also, access patterns must be known ahead of table creation. 
 * Offers Encryption-at-rest that helps to protect sensitive data. 
+* Use cases: 
+	* Media and Metadata stores.
+	* Online Transaction Processing (OLTP) workloads: Retail and Shopping experiences - applications experiencing high traffic, especially during peak times (such as sale events, holidays).
+	* Large scale gaming platforms: High throughput traffic with massive amount of data payload. 
+	* Data with hierarchical structure: Employee tables, department structures, organizational charts. 
+	* Fluctuating workloads: Autoscaling features makes it great for applications whose database workload varies significantly by time of day. For example, social media users that have varying user activity levels throughout the day or e-commerce sites with flash sales. 
+	* Low-latency applications: Mission-critical applications that can't afford downtime. DynamoDB is designed to offer high availability and fault tolerance, making it suitable for applications that require continuous operation such as health care systems and online banking applications. 
 
 ### Components of DynamoDB
 1. Tables, Items and Attributes: Tables are similar to other DB systems. DynamoDB stores data in tables, which is basically collection of data. Each table contains 0 or more items, which is a group of attributes which is uniquely identifiable among all other items. An attribute is a fundamental data element, something that does not need to be broken down any further. 
@@ -11,9 +22,39 @@
 5. Eventually Consistent and Strongly Consistent Reads: Eventually Consistent means there will be bit of a lag in terms of consistency between replicas. Strongly Consistent means the data will be replicated within milliseconds. 
 
 ### Features of DynamoDB
-* Fully synchronizes the data across all availability zones within the regions in which the tables are created. 
+* Provides unlimited storage size. 
+* It is really fast - single-digit millisecond latency at any scale. Latency is less than microsecond with DynamoDB Accelerator (DAX).
+* Automatic Replication: Fully synchronizes the data automatically across all availability zones (all means 3) within the region in which the tables are created, thereby providing high built-in availability. 
+* DynamoDB Global Tables: allows to replicate data across different AWS regions which enables fast and responsive user access for globally distributed applications. 
+* DynamoDB Streams: captures time-ordered sequence of all the modifications in the database table on an item-level. It does this by maintaining a time-ordered list of all the modifications made on the table, like stream record added or updated. 
+* Partitioning: DynamoDB distributes data across partitions without the need for manual handling of partitioning. 
 * Integrates very easily with other AWS services such as EMR. 
 * Can easily move data to a Hadoop cluster in the EMR. 
+
+### DynamoDB Building Blocks
+```mermaid
+	graph LR
+		
+		subgraph NoSQL[NoSQL]
+			a1[Tables]
+			b1[Items]
+			c1[Attributes]
+		end
+		
+		subgraph SQL[SQL]
+			a2[Tables]
+			b2[Rows or Records]
+			c2[Columns or Fields]
+		end
+		
+		a1 ==> a2
+		b1 ==> b2
+		c1 ==> c2
+		
+		style NoSQL color:#6ef7ed,fill:#40594f
+		style SQL color:#6ef7ed,fill:#40594f
+		
+```
 
 ### RDS vs DynamoDB
 | Characterstic     | Relational DBMS                                                                                                                                                                                                                                                                    | Amazon DynamoDB                                                                                                                                                                                                                                                                                                                                                     |
