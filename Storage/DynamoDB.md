@@ -70,6 +70,7 @@
 	* DynamoDB compares current time to the value of TTL key in an item. If the current time is greater than the item's TTL value, then the item is marked for deletion. 
 	* DynamoDB then automatically removes the expired items from the tables, and indexes - including Local Secondary Indexes  (LSIs) and Global Secondary Indexes (GSIs) - within 48 hours of expiration. 
 	* Since the expired item is not deleted immediately, result set of queries might return this item as well. Filter operations to exclude items marked for deletion should be used to avoid this occurrence. 
+
 ### RDS vs DynamoDB
 | Characterstic     | Relational DBMS                                                                                                                                                                                                                                                                    | Amazon DynamoDB                                                                                                                                                                                                                                                                                                                                                     |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -78,3 +79,43 @@
 | Data Access       | SQL is the standard for storing and retrieving data. Relational DB offers a rich set of tools for simplifying the development of database-driven applications, but all of these tools use SQL.                                                                                     | AWS Management Console or AWS CLI can be used to work with DynamoDB and perform ad hoc tasks. Applications can leverage AWS SDKs to work with DynamoDB using object-based, document-centric, or low-level interfaces.                                                                                                                                               |
 | Performance       | Relational DBs are optimized for storage, so performance generally depends on the disk subsystem. Developers and DBAs must optimize queries, indexes and table structures to achieve peak performance.                                                                             | DynamoDB is optimized for compute, so performance is mainly the function of the underlying hardware and network latency. As a managed service, DynamoDB insulates applications from implementations details, so that high-performance application can be designed and built.                                                                                        |
 | Scaling           | It is easiest to scale up with faster hardware. It is also possible for DB tables to span across multiple hosts in a distributed system with additional investment. Relational DBs have maximum sizes for the number and size of files, which imposes upper limits on scalability. | DynamoDB is designed to scale out using distributed clusters of hardware. This design allows increased throughput without increased latency. Customers specify their throughput requirements, and DynamoDB allocates sufficient resources to meet those requirements. There are no upper limits on the number of items per table, nor the total size of that table. |
+
+### Throughput
+* Throughput capacity of DynamoDB depends on one of the two read or write capacity modes: 
+	* Provisioned Capacity Mode
+		* Allows to calculate and provision throughput using capacity units
+			* Read capacity units (RCUs)
+			* Write capacity units (WCUs)
+	* On-demand Capacity Mode
+		* Pre-determined throughput specification is not required as DynamoDB charges in terms of request units. Charged in terms of: 
+			* Read request units (RRUs)
+			* Write request units (WRUs)
+* Both capacity modes have a maximum throughput limit of 40,000 RCU/RRU per table and 40,000 WCU/WRU per table. 
+* What happens when throughput capacity is under-provisioned?
+	* When the consumed capacity becomes greater than provisioned capacity, database will throttle and throw the *ProvisionedThroughputExceededException*. 
+	* This is where Burst Capacity comes to the rescue: 
+		* It occasionally provides bursts or spikes. 
+		* As a result, read and write requests that would typically throttle end up succeeding. 
+		* When throughput for a given partition is not fully used, DynamoDB retains upto 5 minutes (300 seconds) of that unused capacity for later use. And this is the source of Burst Capacity. 
+* One method to address over- or under-provisioning is to use AWS Application Auto Scaling - this will adjust the provisioned throughput and allow to meet the surge traffic. 
+* As a workaround, retry logic can also be implemented in the application code if something is going to fail a couple of times. 
+	* In DynamoDB **exponential backoff** is a specific strategy used in retry logic. 
+	* It determines the time delay between retries. 
+* 
+
+| Provisioned Capacity Mode                                                                                                                                              | On-demand Capacity Mode                                                                                                                                                                                                           |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Provides **consistent** and **predictable** performance                                                                                                                | Database automatically scales according to demand                                                                                                                                                                                 |
+| Pricing is determined by provisioned throughput capacity<br>- Over-provisioning risks unnecessary charges<br>- Under-provisioning risks being subject to throttling    | Follows a **pay-as-you-go** pricing model and is more expensive per request than provisioned<br>- No risk of over- or under-provisioning<br>- Only subject to throttling if the previous peak is exceeded by 2x within 30 minutes |
+| Suitable for applications with: <br>- Predictable traffic and capacity needs<br>- Consistent traffic that ramps gradually over time                                    | Suitable for applications with: <br>- Unpredictable traffic and capacity<br>- New tables with unknown workloads                                                                                                                   |
+| Scaling options: <br>- Enable auto-scaling and define min and max capacity units to control costs<br>- Disable auto-scaling and only define provisioned capacity units | No capacity and scaling planning is needed<br>- Just need to make API calls<br>- Idle tables are only charged for storage and backups but not for read/write operations                                                           |
+| Switch any time to provisioned once the app has gained steady state                                                                                                    | Switch to on-demand if the app experiences a lot of fluctuations<br>- Can only switch to on-demand mode once every 24 hours                                                                                                       |
+
+### PartiQL
+* Allows to use SQL-like syntax to interact with DynamoDB tables. 
+* Supports most of the SQL statements like INSERT, UPDATE, SELECT, DELETE. 
+* Output can be obtained either in Table view format or JSON view format. 
+* Can be accessed from DynamoDB console, AWS Command Line Interface, DynamoDB APIs and NoSQL Workbench. 
+* Potential drawbacks: 
+	* PartiQL queries don't always get translated into efficient DynamoDB API operations. 
+
