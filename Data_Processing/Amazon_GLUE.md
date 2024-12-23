@@ -2,5 +2,5 @@
 
 
 * Intro
-* ![Batch Processing with Glue](batch_processing_glue.png)
+* ![Batch Processing with Glue](assets/amazon_glue/batch_processing_glue.png)
 * 

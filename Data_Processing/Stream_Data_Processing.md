@@ -2,7 +2,7 @@
 
 * Stream data processing is the collection and processing of constant stream of data. 
 * The amount of data being transferred and the size of data packets is not always consistent. 
-* ![String data processing architecture](stream_data_processing_architecture.png)
+* ![String data processing architecture](assets/stream_data_processing/stream_data_processing_architecture.png)
 * The primary objective of an stream data processing architectural design is to decouple the data collection system (producer) from the processing system (consumer). 
 * A streaming solution should also provide a persistent buffer for the incoming data. 
 * Each of the stream producer should also be able to write to the same stream, allowing multiple streams of dispersed data to be combined into a single stream for processing. For example, in an IoT solution, 100s of devices can write to the same endpoint easily. 
@@ -12,7 +12,7 @@
 
 ## Amazon Kinesis
 
-![Kinesis Stream Processing](kinesis_stream_processing.png)
+![Kinesis Stream Processing](assets/stream_data_processing/kinesis_stream_processing.png)
 
 ### Kinesis Firehose
 
@@ -23,4 +23,4 @@
 ### Kinesis Video Streams
 
 
-![Kinesis Video Streams](kinesis_video_streams.png)
+![Kinesis Video Streams](assets/stream_data_processing/kinesis_video_streams.png)
