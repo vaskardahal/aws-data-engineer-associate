@@ -20,7 +20,7 @@
 * Elastic IP Address: Static IPv4 address (in public domain) designed for dynamic cloud computing. Allows to map the failure of an instance and software by rapidly routing\remapping to other instances (rendundant instances) in the account. Elastic IP Address only support IPv4 and not IPv6. 
 
 ## Creating a VPC
-* ![[assets/virtual_private_cloud/vpc.png|VPC]]
+* ![VPC](assets/virtual_private_cloud/vpc.png)
 * The VPC spans all AZs in the region. 
 * Class Inter-Domain Routing (CIDR): 
 	* While creating a VPC, a range of IPv4 addresses need to be specified in the form of CIDR block. 
