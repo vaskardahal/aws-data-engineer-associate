@@ -35,7 +35,7 @@
 
 ### Data Life cycle and Data integrity 
 
-![Data Lifecycle](data_lifecycle.png)
+![Data Lifecycle](assets/veracity_of_data/data_lifecycle.png)
 
 
 ## How to clean data? 
@@ -46,5 +46,5 @@
 4. Identify if the original data (before transformation) value still exists or not and how\what it was. 
 
 
-![How to preserve data integrity?](data_integrity_preservation.png)
+![How to preserve data integrity?](assets/veracity_of_data/data_integrity_preservation.png)
 

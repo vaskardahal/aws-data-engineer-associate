@@ -15,4 +15,4 @@
 5. Secure: Easy to control network access to the database. RDS runs the database instances in Virtual Private Cloud (VPC) which enables us to isolate the database instances and to connect to existing IT infrastructure through an industry standard encrypted IPSec VPN. Encryption-at-rest and Encryption-at-transit is offered.  
 6. Inexpensive: On-demand pricing facilitates to pay only for the resources being consumed. On-demand pricing also does not demand any upfront cost or long-term commitments. Lower hourly rates are offered if Reserved-instance pricing is utilized. 
 
-![Amazon RDS](Amazon_RDS.png)
+![Amazon RDS](assets/relational_database_service/Amazon_RDS.png)

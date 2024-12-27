@@ -8,14 +8,14 @@
 * 
 
 
-![Example of Express AWS Workflow](express_workflow_example.png)
+![Example of Express AWS Workflow](assets/aws_step_functions/express_workflow_example.png)
 
-![Example of AWS Standard Workflow](standard_workflow_example.png)
+![Example of AWS Standard Workflow](assets/aws_step_functions/standard_workflow_example.png)
 
-![Example of AWS Standard Workflow II](standard_workflow_example_II.png)
+![Example of AWS Standard Workflow II](assets/aws_step_functions/standard_workflow_example_II.png)
 
 
-![Example of AWS Standard Workflow III](standard_workflow_example_III.png)
+![Example of AWS Standard Workflow III](assets/aws_step_functions/standard_workflow_example_III.png)
 
-![Example of AWS Standard Workflow IV](standard_workflow_example_IV.png)
+![Example of AWS Standard Workflow IV](assets/aws_step_functions/standard_workflow_example_IV.png)
 

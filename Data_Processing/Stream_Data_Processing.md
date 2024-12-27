@@ -23,16 +23,16 @@
 
 ![Kinesis Stream Processing](assets/stream_data_processing/kinesis_stream_processing.png)
 
-![Stream Processing II](stream_processing_II.png)
+![Stream Processing II](assets/stream_data_processing/stream_processing_II.png)
 
-![Stream Data Processing III](Stream_data_processing_III.png)
+![Stream Data Processing III](assets/stream_data_processing/Stream_data_processing_III.png)
 ### Kinesis Data Streams
 
-![](kinesis_data_streams.png)
+![](assets/stream_data_processing/kinesis_data_streams.png)
 
 ### Kinesis Data Analytics
 
-![](kinesis_data_analytics.png)
+![](assets/stream_data_processing/kinesis_data_analytics.png)
 
 ### Kinesis Video Streams
 

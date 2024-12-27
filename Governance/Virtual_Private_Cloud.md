@@ -23,7 +23,7 @@
 * Elastic IP Address: Static IPv4 address (in public domain) designed for dynamic cloud computing. Allows to map the failure of an instance and software by rapidly routing\remapping to other instances (rendundant instances) in the account. Elastic IP Address only support IPv4 and not IPv6. 
 
 ## Creating a VPC
-* ![VPC](vpc.png)
+* ![VPC](assets/virtual_private_cloud/vpc.png)
 * * The VPC spans all AZs in the region. 
 * Class Inter-Domain Routing (CIDR): 
 	* While creating a VPC, a range of IPv4 addresses need to be specified in the form of CIDR block. 
@@ -37,14 +37,14 @@
 	* After creating the VPC, one or more subnets can be added in each AZ. 
 	* When a subnet is created, a CIDR block can be specified for the subnet - and this CIDR block is the subset of the VPC's CIDR block. 
 	* Each subnet resides only within one AZ and cannot span multiple AZs. 
-* ![VPC with Subnets](vpc_II.png)
+* ![VPC with Subnets](assets/virtual_private_cloud/vpc_II.png)
 
 ## Different connection types for VPCs
-* ![Simple VPC](simple_vpc.png)
-* ![Simple VPC II](simple_vpc_II.png)
-* ![Simple VPC](simple_vpc_III.png)
+* ![Simple VPC](assets/virtual_private_cloud/simple_vpc.png)
+* ![Simple VPC II](assets/virtual_private_cloud/simple_vpc_II.png)
+* ![Simple VPC](assets/virtual_private_cloud/simple_vpc_III.png)
 
 ## Two methods of VPN connection
 * Border Gateway Protocol (Static Routing)
 * AWS Direct Connect
-* ![AWS Direct Connect](aws_direct_connect.png)
+* ![AWS Direct Connect](assets/virtual_private_cloud/aws_direct_connect.png)

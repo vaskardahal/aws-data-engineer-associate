@@ -19,13 +19,13 @@
 * Load: 
 	* 
 
-![ETL](etl.png)
+![ETL](assets/etl/etl.png)
 
-![ETL II](etl_II.png)
+![ETL II](assets/etl/etl_II.png)
 
-![Transformation to combine two datasets](combining_two_datasets.png)
+![Transformation to combine two datasets](assets/etl/combining_two_datasets.png)
 
-![Loading Data](loading_data.png)
+![Loading Data](assets/etl/loading_data.png)
 
 
 ## AWS Glue vs Amazon EMR

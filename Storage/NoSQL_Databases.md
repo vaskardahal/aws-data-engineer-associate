@@ -46,7 +46,7 @@
 	* Analysts must learn new languages to query the data. 
 	* Performing  analytics on the data may not be as efficient as with other database types. 
 * AWS service for graph database is called Amazon Neptune. 
-* ![Amazon Neptune](amazon_neptune.png)
+* ![Amazon Neptune](assets/nosql_databases/amazon_neptune.png)
 * Use cases: 
 	* Social networking
 	* Recommendation systems
