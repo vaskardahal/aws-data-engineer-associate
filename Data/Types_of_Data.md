@@ -1,4 +1,3 @@
-
 # Types of Data
 ### Structured Data
 * Data that follows a predefined model or schema.
@@ -7,7 +6,7 @@
 * Highly structured by rules and constraints set within the database itself. 
 * Easily queryable and commonly stored in Relational Databases. 
 * Backbone of transactional applications. 
-* Examples: spreadsheets, SQL databases, CSV files, Relational tables.
+* Examples: spreadsheets, SQL databases, Relational tables.
 * Around 10% of data. 
 ### Semi-structured Data
 * Data is not neatly structured, but it is not fully unstructured either. 
@@ -31,3 +30,13 @@
 
 ![Structured vs Unstructured Data](assets/types_of_data/structured_vs_unstructured_data.png)
 
+
+## Databases
+
+### NoSQL Databases
+* N
+
+### Misc
+* Is **flat file** (like csv) a structured data? 
+	* No, it is not. While it looks like a flat file like csv has an structure - it has rows and columns - there is no strict schema enforcement. There is nothing preventing these flat files from having different number of columns. 
+	* Also, there is no any relationship between tables in different flat files. 

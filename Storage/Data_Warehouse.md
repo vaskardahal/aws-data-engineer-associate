@@ -33,5 +33,5 @@
 ## Amazon Redshift
 * Fully managed, secure, scalable ( to petabyte-scale) data warehouse service in the cloud. 
 * Amazon Redshift Serverless lets us access and analyze data without all of the configurations of a provisioned data warehouse. 
-* 
+* ![Amazon Redshift](amazon_redshift.png)
 
