@@ -1,7 +1,4 @@
 # AWS Virtual Private Cloud (VPC)
-
-
-* 
 * AWS VPC allows to provision a logically isolated section of the AWS Cloud where we can launch AWS resources in a virtual network that we define. We have complete control over the virtual networking environment, including selection of our own IP Address range, creation of subnets, and configuration of route tables and network gateways. 
 * Both IPv4 and IPv6 can be used. 
 * A public facing subnet can be created for the Web Server that has access to the internet, and backend infra such as databases, app service are kept inside a private subnet with no access to the Internet. 
@@ -23,8 +20,8 @@
 * Elastic IP Address: Static IPv4 address (in public domain) designed for dynamic cloud computing. Allows to map the failure of an instance and software by rapidly routing\remapping to other instances (rendundant instances) in the account. Elastic IP Address only support IPv4 and not IPv6. 
 
 ## Creating a VPC
-* ![VPC](assets/virtual_private_cloud/vpc.png)
-* * The VPC spans all AZs in the region. 
+* ![VPC](assets/virtual_private_cloud/vpc.png | VPC)
+* The VPC spans all AZs in the region. 
 * Class Inter-Domain Routing (CIDR): 
 	* While creating a VPC, a range of IPv4 addresses need to be specified in the form of CIDR block. 
 	* CIDR is an IP addressing scheme that improves the allocation of IP addresses. 
